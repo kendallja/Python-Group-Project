@@ -1,0 +1,42 @@
+Intro to Programming: Final Project Proposal
+Kiran Sundaram & Kendall Anderson
+
+Interactive creation of primary structure of a protein:
+
+We propose to create an interactive program where the user can input x number
+of codons, and visualize a simple linear model of their protein’s primary
+structure in the graphics interface. The program will run on two screens, the
+code screen prompting the user to input codons and the graphics screen where
+the user can visualize their creation. Each amino acid will be a simple shape
+(either an oval or rectangle) with a unique color, which will be displayed when
+the code is complete. If feasible, the color-coded amino acids will also have
+their three-letter code written on them (i.e. Alu, Pro, etc.), otherwise, we
+will provide a key in the graphics output. In order to keep the program more
+biologically accurate, we will use a conditional statement to ensure the user
+inputs the start codon before adding any other codons. In addition, we will use
+a while loop that terminates the adding process when either the user inputs a
+stop codon, or the protein sequence reaches a certain length, where we will
+then prompt the user to enter a stop codon. See below for a basic skeleton of
+the steps we will take to create this code.
+
+Steps:
+> create a list of codons
+> ask user for codon, prompt them to enter the start codon
+    > use if/else statement: if the user inputs the start codon, accept the
+    codon and append to the list
+    > else: prompt the user to try again
+> ask user for up to 5 codons (ex. ‘Input three-letter codon consisting of ‘A’
+‘U’ ‘G’ or ‘C)
+> use if/else statement to ensure user inputs a codon from the list
+    > if the codon is in the list continue with code
+    > else: tell the user that this codon is not correct
+> create a different colored block for each amino acid
+    > using the graphics module
+> add amino acids to strand as user inputs codons
+> for the case in which the user enters less than 5 codons: create a while loop
+to terminate sequence when user inputs a stop codon
+    > while not UAA, UGA, UAG (stop codons): append codon to list, and add
+    protein block to graphic interface
+> terminate code when the user enters the maximum 5 codons, add the stop codon
+
+Graphics Module: http://mcsp.wartburg.edu/zelle/python/graphics.py
